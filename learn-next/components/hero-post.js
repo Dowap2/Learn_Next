@@ -1,16 +1,9 @@
-import Avatar from '../components/avatar'
-import DateFormatter from '../components/date-formatter'
-import CoverImage from '../components/cover-image'
-import Link from 'next/link'
+import Avatar from '../components/avatar';
+import DateFormatter from '../components/date-formatter';
+import CoverImage from '../components/cover-image';
+import Link from 'next/link';
 
-export default function HeroPost({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}) {
+export default function HeroPost({ title, coverImage, date, excerpt, author, slug, videoUrl }) {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -20,6 +13,7 @@ export default function HeroPost({
           slug={slug}
           height={620}
           width={1240}
+          video={videoUrl}
         />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
@@ -39,5 +33,5 @@ export default function HeroPost({
         </div>
       </div>
     </section>
-  )
+  );
 }
